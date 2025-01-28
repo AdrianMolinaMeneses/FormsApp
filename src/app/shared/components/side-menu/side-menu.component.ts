@@ -39,4 +39,11 @@ export class SideMenuComponent {
       route: 'selectors/selector',
     },
   ];
+
+  public productsMenu: MenuItem[] = [
+    {
+      title: 'Productos',
+      route: 'products/product',
+    },
+  ];
 }
