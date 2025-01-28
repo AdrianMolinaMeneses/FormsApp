@@ -9,7 +9,7 @@ import { filter, switchMap, tap } from 'rxjs';
   templateUrl: './selector-page.component.html',
   styleUrl: './selector-page.component.scss',
 })
-export class SelectorPageComponent implements OnInit, OnDestroy {
+export class SelectorPageComponent implements OnInit {
   public myForm!: FormGroup;
   public countriesByRegion: SmallCountry[] = [];
   public borders: SmallCountry[] = [];
@@ -81,9 +81,5 @@ export class SelectorPageComponent implements OnInit, OnDestroy {
 
   get border() {
     return this.myForm.controls['border'].value;
-  }
-
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
   }
 }

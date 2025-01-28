@@ -39,3 +39,16 @@
     {{ item.title }}
   </li>
 </ul>
+
+<h3 class="mt-3">Ciclos de vida</h3>
+
+<ul class="list-group">
+  <li
+    *ngFor="let item of productsMenu"
+    class="list-group-item"
+    [routerLink]="[item.route]"
+    routerLinkActive="active"
+  >
+    {{ item.title }}
+  </li>
+</ul>
