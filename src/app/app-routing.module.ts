@@ -12,6 +12,11 @@ const routes: Routes = [
       import('./reactive/reactive.module').then((m) => m.ReactiveModule),
   },
   {
+    path: 'selectors',
+    loadChildren: () =>
+      import('./countries/countries.module').then((m) => m.CountriesModule),
+  },
+  {
     path: '**',
     redirectTo: 'reactive',
   },
